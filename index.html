@@ -443,12 +443,13 @@ table td a, table th a:hover {
 <div id="excel-table-container" class="table-container"></div>  
 <!-- Moteur d'analyse ultra-léger et autonome intégré directement dans la page -->
 <script>
-    const csvFileUrl = 'histor.csv';
+    const csvFileUrl = 'aout2026.csv';
 
         // 1. VOTRE DICTIONNAIRE DE LIENS (Modifiez les textes et les URL ici)
     const liensPersonnalises = {
         "": "",
-        "": "",        "": "",
+        "": "",        
+        "": "",
         "": "",
         "": "",
         "": "",
@@ -480,7 +481,7 @@ table td a, table th a:hover {
     async function loadCsvTable() {
         try {
             const response = await fetch(csvFileUrl);
-            if (!response.ok) throw new Error("Le fichier 'donnees.csv' est introuvable.");
+            if (!response.ok) throw new Error("Le fichier 'aout2026.csv' est introuvable.");
             
             // 1. Lecture binaire forcée en Windows-1252 pour corriger les accents é, à, ç
             const buffer = await response.arrayBuffer();
